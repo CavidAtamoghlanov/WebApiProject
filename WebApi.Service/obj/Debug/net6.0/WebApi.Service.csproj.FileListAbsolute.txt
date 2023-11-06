@@ -1,0 +1,17 @@
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\bin\Debug\net6.0\WebApi.Service.deps.json
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\bin\Debug\net6.0\WebApi.Service.dll
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\bin\Debug\net6.0\WebApi.Service.pdb
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\bin\Debug\net6.0\WebApi.Core.dll
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\bin\Debug\net6.0\WebApi.Repository.dll
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\bin\Debug\net6.0\WebApi.Repository.pdb
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\bin\Debug\net6.0\WebApi.Core.pdb
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.csproj.AssemblyReference.cache
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.AssemblyInfoInputs.cache
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.AssemblyInfo.cs
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.csproj.CoreCompileInputs.cache
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.csproj.CopyComplete
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.dll
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\refint\WebApi.Service.dll
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\WebApi.Service.pdb
+C:\Users\cavid\source\repos\WebApiApp\WebApi.Service\obj\Debug\net6.0\ref\WebApi.Service.dll
