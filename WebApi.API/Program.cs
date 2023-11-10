@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using WebApi.Core.Repositories.Abstracts;
@@ -8,6 +9,7 @@ using WebApi.Repository.Repositories.Concrets;
 using WebApi.Repository.UnitOfWorks;
 using WebApi.Service.Mapping;
 using WebApi.Service.Services.Concrets;
+using WebApi.Service.Validations;
 
 namespace WebApi.API;
 
@@ -19,7 +21,8 @@ public class Program
 
         // Add services to the container.
 
-        builder.Services.AddControllers();
+        builder.Services.AddControllers().AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<ProductDtoValidator>());
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
@@ -32,6 +35,14 @@ public class Program
 
 
         builder.Services.AddAutoMapper(typeof(MapProfile));
+
+        builder.Services.AddScoped<IProductRepository, ProductRepository>();
+        builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+        builder.Services.AddScoped<IProductService, ProductService>();
+        builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+
+
 
 
         builder.Services.AddDbContext<AppDbContext>(options =>

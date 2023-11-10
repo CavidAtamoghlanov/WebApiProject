@@ -10,18 +10,30 @@ namespace WebApi.API.Controllers
     public class ProductsController : CustomBaseController
     {
         private readonly IMapper _mapper;
-        private readonly IService<Product> _productService;
+   
+        private readonly IProductService service;
 
-        public ProductsController(IMapper mapper, IService<Product> productService)
+        public ProductsController(IMapper mapper, IProductService productService)
         {
             _mapper = mapper;
-            _productService = productService;
+          ;
+            service = productService;
         }
+
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductsWithCategory()
+        {
+            return CreateActionResult(await service.GetProductWithCategory());
+        }
+
+
+
 
         [HttpGet]
         public async Task<IActionResult> All()
         {
-            var products = await _productService.GetAllAsync();
+            var products = await service.GetAllAsync();
             var productDto = _mapper.Map<IEnumerable<ProductDto>>(products).ToList();
 
             //return Ok(CustomResponseDto<List<ProductDto>>.Success(productDto, 200));
@@ -32,32 +44,29 @@ namespace WebApi.API.Controllers
         [HttpGet("id")]
         public async Task<IActionResult> GetById(int id)
         {
-            var product = await _productService.GetByIdAsync(id);
+            var product = await service.GetByIdAsync(id);
             var productDto = _mapper.Map<ProductDto>(product);
 
-            //return Ok(CustomResponseDto<List<ProductDto>>.Success(productDto, 200));
             return CreateActionResult(CustomResponseDto<ProductDto>.Success(productDto, 200));
         }
 
 
-        [HttpPost()]
+        [HttpPost]
         public async Task<IActionResult> Save(ProductDto productDto)
         {
-            var product = await _productService.AddAsync(_mapper.Map<Product>(productDto));
+            var product = await service.AddAsync(_mapper.Map<Product>(productDto));
             var product_Dto = _mapper.Map<ProductDto>(product);
 
-            //return Ok(CustomResponseDto<List<ProductDto>>.Success(productDto, 200));
             return CreateActionResult(CustomResponseDto<ProductDto>.Success(product_Dto, 201));
         }
 
 
-        [HttpPut()]
+        [HttpPut]
         public async Task<IActionResult> Update(ProductupdateDto productDto)
         {
-            await _productService.UpdateAsync(_mapper.Map<Product>(productDto));
+            await service.UpdateAsync(_mapper.Map<Product>(productDto));
 
 
-            //return Ok(CustomResponseDto<List<ProductDto>>.Success(productDto, 200));
             return CreateActionResult(CustomResponseDto<NoContentDto>.Success(201));
         }
 
@@ -66,11 +75,10 @@ namespace WebApi.API.Controllers
         [HttpDelete("id")]
         public async Task<IActionResult> Remove(int id)
         {
-            var product = await _productService.GetByIdAsync(id);
-            await _productService.RemoveAsync(product);
+            var product = await service.GetByIdAsync(id);
+            await service.RemoveAsync(product);
 
 
-            //return Ok(CustomResponseDto<List<ProductDto>>.Success(productDto, 200));
             return CreateActionResult(CustomResponseDto<NoContentDto>.Success(201));
         }
 

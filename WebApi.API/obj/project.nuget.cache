@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "1UTURvk/o0C1jutqadazItC8xaJ2wFNXPe7Ili/fG8wQhx7gDrT1dD0GG/poXz++bGPghleFSZdoyVvhoCcbuQ==",
+  "dgSpecHash": "mPTrdlJD8E0QqFgzvJdd9LV7/fl8cBLyP36h92u8xaEV93mjxGPOeR7VUenQX1eXBwbLhMSODIePQnO5hwDZwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\cavid\\source\\repos\\WebApiApp\\WebApi.API\\WebApi.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cavid\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\cavid\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\cavid\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\cavid\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\cavid\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\cavid\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cavid\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\cavid\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

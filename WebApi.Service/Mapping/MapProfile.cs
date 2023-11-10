@@ -12,6 +12,8 @@ public class MapProfile:Profile
         CreateMap<Product, ProductupdateDto>().ReverseMap();
         CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
         CreateMap<Category, CategoryDto>().ReverseMap();
+        CreateMap<Product, ProductWithCategoryDto>();
+        CreateMap<Category, CategoryWithProductDto>();
      
        
 
